@@ -17,12 +17,12 @@ var work = {
     "description" : "I would enjoy researching in the user experience of Udacity and improving it, and be one of the people who help making it as usable as possible, and as appealing as it can get, it would be a fun, intense, countinous, and joyous process."
     }
   ]
-}
+};
 
 // work function
 function displayWork() {
 
-	for (job in work.jobs) {
+	for (var job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
 		var fWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -59,11 +59,11 @@ var projects = {
     "image" : "images/roomslogo.png"
     }
   ]
-}
+};
 
 // projects function
 function displayProjects() {
-	for(project in projects.projects) {
+	for (var project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
 		var fProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -127,7 +127,7 @@ function displayBio() {
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
-        for(skill in bio.skills) {
+        for (var skill in bio.skills) {
         var fSkill = HTMLskills.replace('%data%', bio.skills[skill]);
           $('#skills').append(fSkill);
     }
@@ -156,11 +156,11 @@ var education = {
         "url": "https://www.udacity.com/degrees/front-end-web-developer-nanodegree--nd001"
       }
     ]
-}
+};
 
 // education function
 function displayEducation() {
-	for (school in education.schools) {
+	for (var school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 
 		var fSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -174,7 +174,7 @@ function displayEducation() {
 		var fSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 		$(".education-entry:last").append(fSchoolLocation);
 
-		for(major in education.schools.majors) {
+		for (var major in education.schools.majors) {
 			var fSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
 			$(".education-entry:last").append(fSchoolMajor);
 		}
@@ -183,7 +183,7 @@ function displayEducation() {
 	if(education.schools.length > 0) {
 		$(".education-entry:last").append(HTMLonlineClasses);
 
-		for(course in education.onlineCourses) {
+		for (var course in education.onlineCourses) {
 			var fOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 			var fOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 			var fTitleAndSchool = fOnlineTitle + fOnlineSchool;
