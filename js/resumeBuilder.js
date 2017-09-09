@@ -32,8 +32,8 @@ work.display = function() {
         var fWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
         var fWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
         $(".work-entry:last").append(fEmployerAndTitle, fWorkDates, fWorkLocation, fWorkDescription);
-    };
-}
+    }
+};
 
 ////////////////////// PROJECTS ///////////////////////
 // projects object
@@ -65,7 +65,7 @@ projects.display = function() {
         var fProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
         $(".project-entry:last").append(fProjectTitle, fProjectDates, fProjectDescription, fProjectImage);
     }
-}
+};
 
 ////////////////////// BIO ///////////////////////
 // bio object
@@ -109,7 +109,7 @@ bio.display = function() {
             $('#skills').append(fSkill);
         }
     }
-}
+};
 
 ////////////////////// EDUCATION ///////////////////////
 // education object
@@ -161,7 +161,7 @@ education.display = function() {
             $(".education-entry:last").append(fTitleAndSchool, fOnlineDates, fOnlineURL);
         }
     }
-}
+};
 
 ////////////////////// calling functions ///////////////////////
 bio.display();
